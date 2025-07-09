@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Jogo Pong</title>
+    <link rel="stylesheet" href="pong.css">
+</head>
+<body>
+    <h1>Pong </h1>
+
+    <div class="options-container">
+        <div class="difficulty-select">
+            <label for="difficulty">Dificuldade:</label>
+            <select id="difficulty">
+                <option value="easy">Baixa</option>
+                <option value="medium" selected>Média</option>
+                <option value="hard">Alta</option>
+            </select>
+        </div>
+
+        <div class="style-select">
+            <label for="gameMode">Modo de Jogo:</label>
+            <select id="gameMode">
+                <option value="ai" selected>vs IA</option>
+                <option value="multiplayer">Multiplayer</option>
+            </select>
+        </div>
+
+        <div class="style-select">
+            <label for="scenario">Cenário:</label>
+            <select id="scenario">
+                <option value="default" selected>Padrão</option>
+                <option value="football">Campo de Futebol</option>
+                <option value="basketball">Quadra de Basquete</option>
+                <option value="space">Espacial</option>
+            </select>
+        </div>
+
+        <div class="style-select">
+            <label for="ballStyle">Bolinha:</label>
+            <select id="ballStyle">
+                <option value="white" selected>Branca</option>
+                <option value="basketball">Basquete</option>
+                <option value="football">Futebol</option>
+            </select>
+        </div>
+
+        <div class="style-select">
+            <label for="player1PaddleColor">Jogador 1 (Cor):</label>
+            <select id="player1PaddleColor">
+                <option value="white" selected>Branca</option>
+                <option value="red">Vermelha</option>
+                <option value="blue">Azul</option>
+            </select>
+        </div>
+
+        <div class="style-select">
+            <label for="player2PaddleColor">Jogador 2 (Cor):</label>
+            <select id="player2PaddleColor">
+                <option value="white" selected>Branca</option>
+                <option value="red">Vermelha</option>
+                <option value="blue">Azul</option>
+            </select>
+        </div>
+    </div>
+
+    <canvas id="gameCanvas" width="800" height="600"></canvas>
+
+    <!-- MODIFICADO: Instruções de controle atualizadas -->
+    <div id="controlsInfo" class="controls-info">
+        <p><strong>Controles:</strong></p>
+        <p id="player1Controls">Jogador 1: W (cima) / S (baixo)</p>
+        <p id="player2Controls">Jogador 2: IA Automática</p>
+        <p><strong>Pausar/Despausar:</strong> P / ESC / Clique Direito</p>
+    </div>
+
+    <div class="controls">
+        <button id="pauseButton">Pause</button>
+        <button id="restartButton">Reiniciar</button>
+    </div>
+
+    <script src="pong.js"></script>
+</body>
+</html>
